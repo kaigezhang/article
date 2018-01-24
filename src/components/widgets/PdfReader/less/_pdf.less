@@ -1,0 +1,164 @@
+.pdf-reader {
+  transition: all .3s ease;
+  //padding-top: 50px;
+  //background-color: #ececec;
+  //padding-left: 0;
+  //position: relative;
+  //width: 100%;
+  //height: 100%;
+  position: fixed;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ececec;
+  .toolbox-wrapper {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    .toolbox {
+      overflow: hidden;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, .75);
+      height: 50px;
+      font-size: 13px;
+      color: #fff;
+      text-align: center;
+      button {
+        border: none;
+        background: none;
+        color: white;
+        margin:0 12px;
+      }
+      > * {
+        line-height: 50px;
+      }
+
+      .count-page {
+        font-size: 16px;
+        font-weight: 600;
+        input {
+          text-align: center;
+          padding: 3px;
+          height: 40px;
+          color: #000;
+          width: 50px;
+          border: none;
+          border-radius: 10%;
+        }
+      }
+
+      .toggle-sidebar {
+        float: left;
+      }
+
+      .zoom-actions {
+        float: right;
+      }
+    }
+  }
+
+  .pdf-viewer {
+    //transition: all .3s ease;
+    //overflow: auto;
+    //width: fit-content;
+    //display: block;
+    //margin: 0 auto;
+
+
+
+    .pdf-page {
+      position: relative;
+      display: block;
+      background-color: #ececec;
+      box-shadow: 0 0 1px 2px transparentize(#000, .98);
+      margin: 0px auto;
+      user-select: none;
+      -webkit-touch-callout: none;
+      transition: all .3s ease;
+      overflow: auto;
+      width: fit-content;
+
+      .pdf-context {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+      }
+      .PDF_Highlights_layer {
+        user-select: none;
+        -webkit-touch-callout: none;
+        opacity: 0.4;
+
+        // do not lighten up colors by highlighting, e.g., black text remains black
+        // although we the highlight is a layer on top of the text.
+        mix-blend-mode: multiply;
+
+        .PDF_Highlight {
+          transition: background-color 0.3s ease;
+
+          //cursor: pointer;
+          &.PDF_Highlight-emphasize {
+            background-color: rgba(41,171,226,1);
+            z-index: 1;
+          }
+          .PDF_Highlight-search {
+            .PDF_Highlight {
+              background-color: lighten(#037292, 10%);
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+.PDF_Popup-buttons {
+  position: absolute;
+  display: inline-block;
+  .PDF_Popup-content {
+    position: relative;
+    background-image: linear-gradient(to bottom,rgba(49,49,47,.99),#262625);
+    background-repeat: repeat-x;
+  }
+  .PDF_Popup-button {
+    span {
+      button{
+        border: none;
+        background: none;
+        padding: 4px 8px;
+        cursor: pointer;
+        &.active,
+        &:hover {
+          background: #424242;
+          color: #fff;
+          svg {
+            path {
+              fill: rgba(255, 255, 255, 1);
+            }
+          }
+        }
+        svg {
+          display: block;
+          width: 24px;
+          height: 24px;
+          path {
+            fill: rgba(255, 255, 255, 0.75);
+          }
+        }
+      }
+    }
+  }
+}
+
+.ReactVirtualized__List {
+  margin: 15px 0;
+}
+

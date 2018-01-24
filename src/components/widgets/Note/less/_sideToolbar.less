@@ -1,0 +1,100 @@
+.side-toolbar {
+  position: absolute;
+  left: -29px;
+  top: 0;
+  &.active {
+    z-index: 100;
+  }
+  .expand-button {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border-radius: 100%;
+    background: #fff;
+    color: #90a4ae;
+    border: 1px solid #cfd8dc;
+    z-index: 100;
+    svg {
+      width: 22px;
+      height: 22px;
+      padding: 2px;
+      margin: auto;
+      fill: #90a4ae;
+    }
+  }
+  .toolbar-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% + 12px);
+    border: 1px solid #e0e0e0;
+    z-index: 100;
+    border-radius: 3px;
+    opacity: 1;
+    transition: opacity .15s ease-in-out;
+    background-color: #fff;
+    &:after {
+      position: absolute;
+      left: -6px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      content: "";
+      padding: 5px;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-right: none;
+      border-top: none;
+    }
+    .toolbar-icons {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      display: flex;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+      li {
+        flex-shrink: 0;
+        display: block;
+        margin: 0;
+        transition: ease-in-out, transform .1s ease-in-out;
+        opacity: 1;
+        transform: scale(.9) translateX(-4px);
+        position: relative;
+        z-index: 101;
+        button {
+          display: block;
+          margin: 0;
+          padding: 8px 10px;
+          font-size: 22px;
+          line-height: 1;
+          color: #616161;
+          background: #fff;
+          position: relative;
+          border: none;
+          cursor: pointer;
+          &:first-child {
+            border-radius: 3px 0 0 3px;
+          }
+          &:last-child {
+            border-radius: 0 3px 3px 0;
+          }
+          svg {
+            display: block;
+            width: 18px;
+            height: 18px;
+            path {
+              fill: rgba(0, 0, 0, .64);
+            }
+          }
+          &:hover {
+            background: #f1f1f1;
+          }
+        }
+      }
+    }
+  }
+}

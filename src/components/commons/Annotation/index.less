@@ -1,0 +1,119 @@
+.new-annotation-header {
+  text-align: left;
+  font-weight: lighter;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+
+
+.text-editor {
+  padding: 10px;
+  width: 450px;
+  margin: auto;
+}
+
+.draft-field {
+  max-height: 400px;
+  min-height: 150px;
+  width: 100%;
+  margin: 0 auto 10px;
+  font-size: 16px;
+  background: #fff;
+  padding: 3px 6px;
+  border: 2px solid #f5f5f5;
+  overflow: auto;
+  .paragraph {
+    margin-bottom: 1.5rem;
+  }
+  blockquote {
+    margin-left: 0px;
+    padding-left: 21px;
+    border-left: 3px solid #444;
+  }
+}
+
+.toolbar {
+  display: flex;
+  justify-content: flex-start;
+  position: sticky;
+}
+
+.toolbar span {
+  margin: 0px 10px;
+  cursor: pointer;
+  svg {
+    path {
+      fill: #444;
+    }
+  }
+}
+
+
+.annotation-submit {
+  margin: 15px 0px;
+  width: 90px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid #0ECB27;
+  color: #0ECB27;
+  text-align: center;
+
+}
+
+.annotation-submit:hover {
+  background-color: #0ECB27;
+  color: white;
+  transition: .2s;
+}
+
+.annotation-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button {
+  padding: 5px;
+  width: 90px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid red;
+  color: red;
+  text-align: center;
+}
+
+.cancel-button {
+  padding: 5px;
+  width: 90px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid red;
+  color: red;
+  text-align: center;
+  margin: 15px 0px;
+}
+
+.delete-button:hover {
+  background-color: red;
+  color: white;
+  transition: .2s;
+}
+
+.edit-button {
+  margin-left: auto;
+  padding: 5px;
+  width: 90px;
+  height: 35px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center
+}
+
+.edit-button:hover {
+  transition: .2s;
+  background-color: #CCCCCC;
+}
+
+.annotation-error {
+  color: red;
+}

@@ -1,0 +1,45 @@
+#header {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 8px #f0f1f2;
+  box-shadow: 0 2px 8px #f0f1f4;
+  margin:0 100px;
+  height: 64px;
+  line-height:64px;
+}
+
+#nav {
+  border: 0;
+  float: left;
+  font-size: 14px;
+  font-family: Lato,Helvetica Neue For Number,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
+  li {
+    height: 64px;
+    line-height: 64px;
+    min-width: 72px;
+    border-top: 2px solid transparent;
+    &.ant-menu-item-selected a {
+      color: #108ee9;
+      font-weight: 700;
+    }
+    a {
+      color: #000;
+      transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    }
+  }
+}
+
+.nav {
+  .nav-header {
+    float: left;
+    line-height: 64px;
+    a {
+      font-size: 32px;
+      padding: 16px 32px;
+    }
+  }
+  div {
+    display: inline-block;
+  }
+}
